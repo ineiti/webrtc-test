@@ -19,11 +19,13 @@ jobs:
 
     - uses: Swatinem/rust-cache@v1
 
-    - uses: actions-rs/cargo@v1
+    - name: Run main
+      uses: actions-rs/cargo@v1
       with:
         command: run
 
-    - uses: actions-rs/cargo@v1
+    - name: Run test
+      uses: actions-rs/cargo@v1
       with:
         command: test
         args: -- --nocapture
